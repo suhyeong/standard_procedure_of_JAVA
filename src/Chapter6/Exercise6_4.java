@@ -2,7 +2,7 @@ package Chapter6;
 
 public class Exercise6_4 {
 	public static void main(String args[]) {
-		Student s = new Student();
+		Student1 s = new Student1();
 		s.name = "ȫ�浿";
 		s.ban = 1;
 		s.no = 1;
@@ -17,7 +17,7 @@ public class Exercise6_4 {
 }
 
 
-class Student {
+class Student1 {
 	String name;
 	int ban;
 	int no;
