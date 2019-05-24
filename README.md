@@ -6,10 +6,10 @@ JAVA의 정석 책에 수록되어 있는 예제문제 혹은 연습문제 풀�
 
 
 
-내용 정리 :thumbsup:
+:thumbsup: 내용 정리 :thumbsup:
 -
 
-Chapter 6. 객체지향 프로그래밍 1  
+:six: Chapter 6. 객체지향 프로그래밍 1  
 
 
 **<클래스메서드(static메서드)와 인스턴스메서드>**
