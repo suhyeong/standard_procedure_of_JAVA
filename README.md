@@ -3,13 +3,8 @@ Practice of book 'JAVA의 정석(남궁성 저자)'
 JAVA의 정석 책에 수록되어 있는 예제문제 혹은 연습문제 풀이입니다.
 
 
-
-
-
-:thumbsup: 내용 정리 :thumbsup:
--
-
- :paperclip: Chapter 6. 객체지향 프로그래밍 1  :paperclip:
+Chapter 6. 객체지향 프로그래밍 1 
+ -
 
 
 **<클래스메서드(static메서드)와 인스턴스메서드>**
@@ -128,7 +123,8 @@ this(), this(매개변수) : 생성자, 같은 클래스의 다른 생성자를 
 
 
 
- :paperclip: Chapter 7. 객체지향 프로그래밍 2 :paperclip:
+Chapter 7. 객체지향 프로그래밍 2
+ -
 
 
 **<상속>**
@@ -180,7 +176,6 @@ class Child extends Parent {
      void childMethod(int i) { } //오버로딩
 }
 ```
-
 
 
 
@@ -471,8 +466,8 @@ class Fighter extends Unit implements Fightable {
 ```
 
 
-
- :paperclip: Chapter 8 . 예외처리 :paperclip:
+Chapter 8 . 예외처리
+ -
 
 
 **<예외처리>**
@@ -560,7 +555,8 @@ try {
 
 
 
- :paperclip: Chapter 10 . 내부 클래스  :paperclip:
+Chapter 10 . 내부 클래스
+-
 
 
 **<내부 클래스>**
