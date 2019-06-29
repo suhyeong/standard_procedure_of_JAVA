@@ -644,10 +644,10 @@ new 구현인터페이스이름() {
 
 * List, Set, Map
 
-	* 인터페이스 　　　특징
-List　　　 순서가 있는 데이터의 집합. 데이터의 중복을 허용 O (ArrayList, LinkedList, Stack, Vector)
-Set　　　　순서를 유지하지 않는 데이터의 집합. 데이터의 중복 허용 X (HashSet, TreeSet)
-Map　　　　키와 값의 쌍으로 이루어진 데이터의 집합. 순서는 유지되지 않으며 키는 중복을 허용하지 않고 값은 중복을 허용 (HashMap, TreeMap, Hashtable, Properties)
+	* 인터페이스 특징
+	List : 순서가 있는 데이터의 집합. 데이터의 중복을 허용 O (ArrayList, LinkedList, Stack, Vector)
+	Set : 순서를 유지하지 않는 데이터의 집합. 데이터의 중복 허용 X (HashSet, TreeSet)
+	Map : 키와 값의 쌍으로 이루어진 데이터의 집합. 순서는 유지되지 않으며 키는 중복을 허용하지 않고 값은 중복을 허용 (HashMap, TreeMap, Hashtable, Properties)
 
 
 * 동기화(Synchronization)
@@ -691,10 +691,6 @@ class Node {
 -> ArrayList와 LinkedList 비교
 ① 순차적으로 추가/삭제하는 경우에는 ArrayList가 더 빠르다
 ② 중간 데이터를 추가/삭제하는 경우에는 LinkedList가 더 빠르다
-
-컬렉션 　　　　읽기 　　　　추가/삭제 　　　　　　　　　　　　　비고
-ArrayList　　　빠름 　　　　　느림　　　　순차적인 추가삭제는 빠르지만 비효율적인 메모리 사용
-LinkedList　　 느림　　　　　 빠름　　　　데이터가 많을수록 접근성 떨어짐
 
 
 -> 두 클래스를 혼합해서 사용하는 방법
