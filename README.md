@@ -726,9 +726,9 @@ Iterator list = eSet.iterator();
 ```
 -> Map인터페이스는 Key와 Value를 쌍으로 저장하고 있기 때문에 iterator()를 직접 호출할 수 없고, 그 대신 keySet()이나 entrySet()과 같은 메서드를 통해서 키와 값을 각각 따로 Set의 형태로 얻어 온 후에 다시 iterator()를 호출해야 Iterator를 얻을 수 있다.
 
-	* Enumeration, ListIterator
-● Enumeration : Iterator의 구 버전, Enumeration 대신 Iterator를 사용하자.
-● ListIterator : Iterator를 상속받아서 기능을 추가한 것으로, Iterator는 단방향으로만 이동할 수 있는 데 반해 ListIterator는 양방향으로의 이동이 가능하다.
+* Enumeration, ListIterator
+	● Enumeration : Iterator의 구 버전, Enumeration 대신 Iterator를 사용하자.
+	● ListIterator : Iterator를 상속받아서 기능을 추가한 것으로, Iterator는 단방향으로만 이동할 수 있는 데 반해 ListIterator는 양방향으로의 이동이 가능하다.
 
 
 * HashSet
@@ -748,11 +748,11 @@ class TreeNode {
 }
 ```
 
-	● 이진검색트리(binary search tree)
-	① 모든 노드는 최대 두 개의 자식노드를 가질 수 있다.
-	② 왼쪽 자식노드의 값은 부모노드의 값보다 작고 오른쪽 자식 노드의 값은 부모노드의 값보다 커야한다.
-	③ 노드의 추가 삭제에 시간이 걸린다 (순차적 저장 X)
-	④ 검색과 정렬에 유리
+● 이진검색트리(binary search tree)
+① 모든 노드는 최대 두 개의 자식노드를 가질 수 있다.
+② 왼쪽 자식노드의 값은 부모노드의 값보다 작고 오른쪽 자식 노드의 값은 부모노드의 값보다 커야한다.
+③ 노드의 추가 삭제에 시간이 걸린다 (순차적 저장 X)
+④ 검색과 정렬에 유리
 
 
 * Comparator, Comparable: 객체들을 정렬 또는 이진검색트리를 구성하는데 필요한 메서드를 정의하고 있는 인터페이스.
