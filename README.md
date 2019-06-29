@@ -639,14 +639,19 @@ new 구현인터페이스이름() {
 
 > 1. 컬렉션 프레임워크(Collection Framework)
 : 데이터 군을 저장하는 Vector와 같은 클래스들을 표준화한 설계
+
 -> 컬렉션(다수의 데이터)을 다루는 데에 필요한 다양하고 풍부한 클래스들을 제공하기 때문에 프로그래머의 짐을 상당히 덜어줌
+
 -> 인터페이스의 다형성을 이용한 객체 지향적 설계를 통해 표준화되어 있기 때문에 사용법을 익히기에도 편리하고 재사용성이 높은 코드를 작성할 수 있다는 장점
 
 * List, Set, Map
 
 	* 인터페이스 특징
+	
 	List : 순서가 있는 데이터의 집합. 데이터의 중복을 허용 O (ArrayList, LinkedList, Stack, Vector)
+	
 	Set : 순서를 유지하지 않는 데이터의 집합. 데이터의 중복 허용 X (HashSet, TreeSet)
+	
 	Map : 키와 값의 쌍으로 이루어진 데이터의 집합. 순서는 유지되지 않으며 키는 중복을 허용하지 않고 값은 중복을 허용 (HashMap, TreeMap, Hashtable, Properties)
 
 
@@ -658,20 +663,32 @@ List list = Collections.snchronizedList(new ArrayList(...));
 
 * Vector, ArrayList
 -> 공통점
+
 ① List인터페이스를 구현. 저장순서가 유지되고 중복을 허용
+
 ② 데이터의 저장 공간으로 배열을 사용
+
 -> 차이점
+
 ① Vector는 멀티쓰레드에 대한 동기화가 되어있으나 ArrayList는 그렇지 않다.
 
 
 * LinkedList
+
 -> 배열의 장점
+
 ① 구조가 간단하며 사용하기 쉽고 데이터를 읽어오는데 걸리는 시간이 가장 빠르다
+
 -> 배열의 단점
+
 ① 크기를 변경할 수 없다. (새로운 배열을 생성해서 데이터를 복사하는 작업이 필요)
+
 ② 비순차적인 데이터의 추가 또는 삭제에 시간이 많이 걸린다.
+
 -> 배열의 단점을 보완하기 위해 LinkedList를 사용
+
 : LinkedList의 각 요소(node)들은 자신과 연결된 다음 요소에 대한 참조(주소값)와 데이터로 구성
+
 ```
 class Node {
 	Node next; //다음 요소의 주소를 저장
@@ -689,6 +706,7 @@ class Node {
 ```
 
 -> ArrayList와 LinkedList 비교
+
 ① 순차적으로 추가/삭제하는 경우에는 ArrayList가 더 빠르다
 
 ② 중간 데이터를 추가/삭제하는 경우에는 LinkedList가 더 빠르다
@@ -725,20 +743,25 @@ Set eSet = map.entrySet();
 Iterator list = eSet.iterator();
 //= Iterator list = map.entrySet().iterator();
 ```
+
 -> Map인터페이스는 Key와 Value를 쌍으로 저장하고 있기 때문에 iterator()를 직접 호출할 수 없고, 그 대신 keySet()이나 entrySet()과 같은 메서드를 통해서 키와 값을 각각 따로 Set의 형태로 얻어 온 후에 다시 iterator()를 호출해야 Iterator를 얻을 수 있다.
 
 * Enumeration, ListIterator
+
 	● Enumeration : Iterator의 구 버전, Enumeration 대신 Iterator를 사용하자.
+	
 	● ListIterator : Iterator를 상속받아서 기능을 추가한 것으로, Iterator는 단방향으로만 이동할 수 있는 데 반해 ListIterator는 양방향으로의 이동이 가능하다.
 
 
 * HashSet
 : Set인터페이스를 구현한 가장 대표적인 컬렉션, Set인터페이스의 특징대로 HashSet은 중복된 요소를 저장하지 않는다 => 중복된 요소들을 쉽게 제거 가능
+
 -> HashSet은 저장순서를 유지하지 않으므로 저장순서를 유지하고자 한다면 LinkedHashSet을 사용해야한다.
 
 
 * TreeSet
 : 이진검색트리(binary search tree)라는 자료구조의 형태로 데이터를 저장하는 컬렉션 클래스. TreeSet은 이진검색 트리의 성능을 향상시킨 ‘레드-블랙 트리(Red-Black tree)로 구현되어 있다. 
+
 -> Set인터페이스를 구현했으므로 중복된 데이터의 저장을 허용하지 않으며 정렬된 위치에 저장하므로 저장순서를 유지하지도 않는다.
 
 ```
@@ -761,11 +784,17 @@ class TreeNode {
 
 
 * Comparator, Comparable: 객체들을 정렬 또는 이진검색트리를 구성하는데 필요한 메서드를 정의하고 있는 인터페이스.
+
 	● Comparable : 기본 정렬기준을 구현하는데 사용 ⊂ java.lang패키치
+	
 	-> 같은 타입의 인스턴스끼리 서로 비교할 수 있는 클래스들. (Integer와 같은 wrapper클래스, String, Date, File 등 정렬되도록 구현)
+	
 	-> Comparable을 구현하지 않은 클래스의 인스턴스를 TreeSet에 담는다면 정렬기준이 없기 때문에 당연히 알아서 정렬되지 않고 실행 시 에러가 발생한다.
+	
 	● Comparator : 기본 정렬기준 외에 다른 기준을 정렬하고자할 때 사용 ⊂ java.util패키지
+	
 	-> Comparable은 기본적으로 오름차순으로 정렬되어 있지만, 다른 기준에 의해서 정렬되도록 하고 싶을 때 Comparator를 구현해서 정렬기준을 제공할 수 있다.
+	
 ```
 public interface Comparator {
 	int compare(Obejct o1, Object o2);
@@ -778,6 +807,8 @@ public interface Comparable {
 
 * Hashtable, HashMap
 : Hashtable과 HashMap의 관계는 Vector, ArrayList의 관계와 같음. -> HashMap 사용 권고
+	
 	● HashMap
+	
 	: Map의 특징(key와 value를 묶어서 하나의 데이터로 저장)을 갖고 해싱을 사용하기 때문에 많은 양의 데이터를 검색하는데 있어 뛰어난 성능을 보임.
 	-> 키와 값을 각각 Object 타입으로 저장하기 때문에 어떠한 객체도 저장.
